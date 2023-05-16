@@ -77,6 +77,17 @@ var pokémon = [
     { "id": 148, "name": "Dragonair", "types": ["dragon"] }
 ];
 
+function flying() {
+    for(let i = 0; i < pokémon.length; i++) {
+        if(pokémon[i].types[1] == "flying") {
+            console.log(pokémon[i].name);
+        }
+    }
+}
+
+flying();
+
+
 function reversedPoison() {
     for(var i = pokémon.length-1; i >= 0; i--) {
         if((pokémon[i].types.length == 1) && (pokémon[i].types == "poison"))  {
@@ -125,6 +136,15 @@ function poison() {
     }
 }
 poison();
+
+function flying() {
+    for(let i = 0; i < pokémon.length; i++) {
+        if(pokémon[i].types[1] == "flying") {
+            console.log(pokémon[i].name);
+        }
+    }
+}
+flying();
 
 
 
