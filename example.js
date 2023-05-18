@@ -146,6 +146,56 @@ function flying() {
 }
 flying();
 
+// Week 2 Day 4
+
+function isPresent2d(arr2d, value) {
+    for (var i = 0; i<arr2d.length; i++) {
+        for (var j = 0; j<arr2d[i].length; j++) {
+            if (arr2d[i][j] === value) {
+                return (true);
+            }
+            }
+        }
+        return (false);
+    }
+
+
+var arr2d = [ [2, 5, 8],
+              [3, 6, 1],
+              [5, 7, 7] ];
+
+var result = isPresent2d(arr2d, 9);
+console.log(result);
+
+
+// We can console.log the `8` in this array if we
+console.log(arr2d[0][2]);
+// the first index `0` will select the `[2, 5, 8]` sub-array
+// the second index `2` will select the `8` out of that sub-array.
+
+console.log(isPresent2d(example2d, 0));
+console.log(isPresent2d(example2d, 5));
+
+function flatten(arr2d) {
+    var flat = [];
+    var counter = 0;    
+	
+    for (var i = 0; i < arr2d.length; i++) {
+		for (var j = 0; j < arr2d[i].length; j++) {
+			flat[counter] = arr2d[i][j];
+			counter ++;
+		}
+	}
+
+    return flat;
+}
+    
+var result = flatten( [ [2, 5, 8], [3, 6, 1], [5, 7, 7] ] );
+console.log(result); // we expect to get back [2, 5, 8, 3, 6, 1, 5, 7, 7]
+
+
+
+
 
 
 
