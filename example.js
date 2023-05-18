@@ -78,8 +78,8 @@ var pokémon = [
 ];
 
 function flying() {
-    for(let i = 0; i < pokémon.length; i++) {
-        if(pokémon[i].types[1] == "flying") {
+    for (let i = 0; i < pokémon.length; i++) {
+        if (pokémon[i].types[1] == "flying") {
             console.log(pokémon[i].name);
         }
     }
@@ -89,9 +89,9 @@ flying();
 
 
 function reversedPoison() {
-    for(var i = pokémon.length-1; i >= 0; i--) {
-        if((pokémon[i].types.length == 1) && (pokémon[i].types == "poison"))  {
-        console.log(pokémon[i].name);
+    for (var i = pokémon.length - 1; i >= 0; i--) {
+        if ((pokémon[i].types.length == 1) && (pokémon[i].types == "poison")) {
+            console.log(pokémon[i].name);
         }
     }
 }
@@ -129,17 +129,17 @@ function moreThanOneType() {
 moreThanOneType();
 
 function poison() {
-    for(var i = 0; i < pokémon.length; i++) {
-        if((pokémon[i].types.length == 1) && (pokémon[i].types == "poison"))  {
-        console.log(pokémon[i].name);
+    for (var i = 0; i < pokémon.length; i++) {
+        if ((pokémon[i].types.length == 1) && (pokémon[i].types == "poison")) {
+            console.log(pokémon[i].name);
         }
     }
 }
 poison();
 
 function flying() {
-    for(let i = 0; i < pokémon.length; i++) {
-        if(pokémon[i].types[1] == "flying") {
+    for (let i = 0; i < pokémon.length; i++) {
+        if (pokémon[i].types[1] == "flying") {
             console.log(pokémon[i].name);
         }
     }
@@ -149,20 +149,20 @@ flying();
 // Week 2 Day 4
 
 function isPresent2d(arr2d, value) {
-    for (var i = 0; i<arr2d.length; i++) {
-        for (var j = 0; j<arr2d[i].length; j++) {
+    for (var i = 0; i < arr2d.length; i++) {
+        for (var j = 0; j < arr2d[i].length; j++) {
             if (arr2d[i][j] === value) {
                 return (true);
             }
-            }
         }
-        return (false);
     }
+    return (false);
+}
 
 
-var arr2d = [ [2, 5, 8],
-              [3, 6, 1],
-              [5, 7, 7] ];
+var arr2d = [[2, 5, 8],
+[3, 6, 1],
+[5, 7, 7]];
 
 var result = isPresent2d(arr2d, 9);
 console.log(result);
@@ -178,19 +178,19 @@ console.log(isPresent2d(example2d, 5));
 
 function flatten(arr2d) {
     var flat = [];
-    var counter = 0;    
-	
+    var counter = 0;
+
     for (var i = 0; i < arr2d.length; i++) {
-		for (var j = 0; j < arr2d[i].length; j++) {
-			flat[counter] = arr2d[i][j];
-			counter ++;
-		}
-	}
+        for (var j = 0; j < arr2d[i].length; j++) {
+            flat[counter] = arr2d[i][j];
+            counter++;
+        }
+    }
 
     return flat;
 }
-    
-var result = flatten( [ [2, 5, 8], [3, 6, 1], [5, 7, 7] ] );
+
+var result = flatten([[2, 5, 8], [3, 6, 1], [5, 7, 7]]);
 console.log(result); // we expect to get back [2, 5, 8, 3, 6, 1, 5, 7, 7]
 
 
